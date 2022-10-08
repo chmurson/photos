@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "html">
+
+<html lang="sv">
+    <head>
+        <title>twoja stara</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="generator" content="Capture One http://phaseone.com/">
+        <meta name="author" content="">
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/galleria.js"></script>
+        <style type="text/css">
+                html, body { background-color: #000;}
+            </style>
+        <link rel="stylesheet" type="text/css" media="screen, print" href="theme/fullscreendark_contactsheet.css">
+        <!--[if IE]>
+			<link rel="stylesheet" type="text/css" media="screen, print" href="theme/fullscreendark_contactsheet_ie.css">
+			<![endif]-->
+    </head>
+    <body>
+        <div id="toggle-info-button"></div>
+        <div id="info-panel" style="left:-300px; opacity:0;">
+            <div id="wcs-title">twoja stara</div>
+            <div id="wcs-description"></div>
+            <div id="contact-info-box">Copyright © <a href="mailto:sketchy.jujube0x@icloud.com" id="wcs-contact-link"></a>
+            </div>
+        </div>
+        <div id="galleria">
+            <a href="photos/previews/DSCF0765.RAF.p.jpg">
+                <img src="photos/thumbnails/DSCF0765.RAF.t.jpg" id="DDD03911-34C5-4570-9DE4-07CF911F3CE8" title="DSCF0765">
+            </a>
+            <a href="photos/previews/DSCF0766.RAF.p.jpg">
+                <img src="photos/thumbnails/DSCF0766.RAF.t.jpg" id="0B726D12-B45D-498E-9671-637AC392F200" title="DSCF0766">
+            </a>
+            <a href="photos/previews/DSCF0767.RAF.p.jpg">
+                <img src="photos/thumbnails/DSCF0767.RAF.t.jpg" id="24450596-EF62-482E-96C5-BC8192AD72B6" title="DSCF0767">
+            </a>
+            <a href="photos/previews/DSCF0767_HDR%20-auto_adjust.dng.p.jpg">
+                <img src="photos/thumbnails/DSCF0767_HDR%20-auto_adjust.dng.t.jpg" id="E8F72E22-752D-429F-ADA3-06BA2AC7A488" title="DSCF0767_HDR -auto_adjust">
+            </a>
+            <a href="photos/previews/DSCF0767_HDR%20+%20auto_adjust.dng.p.jpg">
+                <img src="photos/thumbnails/DSCF0767_HDR%20+%20auto_adjust.dng.t.jpg" id="CDA07D0B-7E27-4D85-BCAD-41FBD509716E" title="DSCF0767_HDR + auto_adjust">
+            </a>
+            <a href="photos/previews/DSCF0783_HDR.dng.p.jpg">
+                <img src="photos/thumbnails/DSCF0783_HDR.dng.t.jpg" id="1C4B1CEF-DFE2-495B-9093-352FAB5B5E72" title="DSCF0783_HDR">
+            </a>
+            <a href="photos/previews/DSCF0791.RAF.p.jpg">
+                <img src="photos/thumbnails/DSCF0791.RAF.t.jpg" id="8BF82509-4A8D-46B1-8C98-BBD0E5509C09" title="DSCF0791">
+            </a>
+            <a href="photos/previews/DSCF0792.RAF.p.jpg">
+                <img src="photos/thumbnails/DSCF0792.RAF.t.jpg" id="6F658651-5E35-4932-8E4A-2D20BD22E95B" title="DSCF0792">
+            </a>
+            <a href="photos/previews/DSCF0793.RAF.p.jpg">
+                <img src="photos/thumbnails/DSCF0793.RAF.t.jpg" id="3C669883-4114-40FC-9EA6-515FC004FDE3" title="DSCF0793">
+            </a>
+            <a href="photos/previews/DSCF0793_HDR.dng.p.jpg">
+                <img src="photos/thumbnails/DSCF0793_HDR.dng.t.jpg" id="48F49236-C232-4697-836D-8C811FFC964E" title="DSCF0793_HDR">
+            </a>
+        </div>
+        <script type="text/javascript">
+				Galleria.loadTheme('theme/galleria.fullscreen_dark.js');
+				$('#galleria').galleria();					
+				
+				function toggleInfoPanel(showIt) {
+					var infoPanel = $("#info-panel");
+					var toggleButton = $("#toggle-info-button");
+					 
+					if (showIt) {				
+						toggleButton.fadeOut("fast", function(){
+							toggleButton.addClass("panel-open").fadeIn();
+						});
+						
+						infoPanel.animate({
+							opacity: 1,
+							left: "0px"
+						}, "fast");
+					} else {
+							
+						toggleButton.fadeOut("fast", function(){
+							toggleButton.removeClass("panel-open").fadeIn();
+						});
+						
+						infoPanel.animate({
+							opacity: 0,			
+							left: "-300px"
+						}, "fast");			
+					}	
+				}
+				toggleInfoPanel(false);	
+				//close panel on click outside
+				$('body').click(function() { 
+					if ($("#toggle-info-button").hasClass("panel-open")) 
+						toggleInfoPanel(false); 
+				});
+				$('#infoPanel').click(function(event){ event.stopPropagation(); });
+				$("#toggle-info-button").click(function(event){		
+					toggleInfoPanel( $(this).hasClass("panel-open") == false);
+					event.stopPropagation(); 	
+				});				
+			</script>
+    </body>
+</html>

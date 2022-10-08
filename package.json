@@ -1,0 +1,8 @@
+{
+  "name": "photos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:chmurson/photos.git",
+  "author": "Wojciech Piątkowski <chmurson@gmail.com>",
+  "license": "MIT"
+}
